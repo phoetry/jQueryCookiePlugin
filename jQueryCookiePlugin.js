@@ -1,6 +1,6 @@
 /**
   * jQuery Cookie Plugin v0.1
-  * Easily add, delete or modify browser cookies.
+  * Easily get/add/delete/modify browser cookies.
   * @Author: Phoetry (http://phoetry.me)
   * @Url: http://phoetry.me/archives/jquery-cookie.html
   **/

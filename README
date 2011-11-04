@@ -1,11 +1,14 @@
 Current Version: jQuery Cookie Plugin v0.1
 
-Use this mini plugin to easily add, delete or modify browser cookies.
+Use this mini plugin to easily get/add/delete/modify browser cookies.
 
-To add or modify one cookie:
+To get value of a cookie:
+$.cookie(cookieName);
+
+To add or modify a cookie:
 $.cookie(cookieName,cookieValue,moreAttributes);
 
-To delete one cookie:
+To delete a cookie:
 $.cookie(cookieName,'');
 
 Note:
