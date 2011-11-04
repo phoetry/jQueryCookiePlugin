@@ -1,0 +1,26 @@
+Current Version: jQuery Cookie Plugin v0.1
+
+Use this mini plugin to easily add, delete or modify browser cookies.
+
+To add or modify one cookie:
+$.cookie(cookieName,cookieValue,moreAttributes);
+
+To delete one cookie:
+$.cookie(cookieName,'');
+
+Note:
+cookieName should be a String, like: 'wp-settings-1';
+cookieValue should be a String or a Number;
+moreAttributes should be an {Object} include these items: expires, domain, path, secure.
+You can read details at http://en.wikipedia.org/wiki/HTTP_cookie#Domain_and_Path
+By default, moreAttributes = {expires : 30}
+
+History:
+2011.11.04 | v0.1
+
+Author: Phoetry
+Blog: http://phoetry.me
+Plugin Page: http://phoetry.me/archives/jquery-cookie.html
+GitHub Page: https://github.com/phoetry/jQueryCookiePlugin
+
+Thank you.
