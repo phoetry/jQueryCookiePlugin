@@ -5,7 +5,7 @@
   * @Url: http://phoetry.me/archives/jquery-cookie.html
   **/
 ~function(doc){
-$.cookie=function(key,val,opt){
+jQuery.cookie=function(key,val,opt){
 	if(!key)return doc.cookie;
 	if('string'!=typeof val&&'number'!=typeof val)
 	return new RegExp('(?:^|; )'+key+'=([^;]*)').test(doc.cookie)?decodeURIComponent(RegExp['$1']):'No matching items.';
