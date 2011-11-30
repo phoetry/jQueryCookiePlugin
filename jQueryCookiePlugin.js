@@ -1,19 +1,19 @@
 /**
-  * jQuery Cookie Plugin v0.1
+  * jQuery Cookie Plugin v0.2
   * Easily get/add/delete/modify browser cookies.
   * @Author: Phoetry (http://phoetry.me)
   * @Url: http://phoetry.me/archives/jquery-cookie.html
   **/
 ~function(doc){
 jQuery.cookie=function(key,val,opt){
-	if(!key)return doc.cookie;
-	if('string'!=typeof val&&'number'!=typeof val)
-	return new RegExp('(?:^|; )'+key+'=([^;]*)').test(doc.cookie)?decodeURIComponent(RegExp['$1']):'No matching items.';
+	if(null==key)return doc.cookie;
+	if(val!==''+val&&val!==+val)
+	return unescape((doc.cookie.match(key+'=(.+?);')||0)[1]||'');
 	opt=opt||{};
-	var s,date=new Date(),cookie=key+'='+encodeURIComponent(val);
-	date.setDate(date.getDate()+(val!==''?opt.expires||30:-1));
+	var it,date=new Date(),cookie=key+'='+encodeURIComponent(val);
+	date.setDate(date.getDate()+(''!==val?opt.expires||30:-1));
 	opt.expires=date.toUTCString();
-	for(s in opt)opt.hasOwnProperty(s)&&opt[s]&&(cookie+=';'+s+'='+opt[s]);
+	for(it in opt)opt.hasOwnProperty(it)&&opt[it]&&(cookie+=';'+it+'='+opt[it]);
 	doc.cookie=cookie;
 }
-}(document);
+}(window.document);
