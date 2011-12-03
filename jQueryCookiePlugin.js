@@ -10,7 +10,7 @@ jQuery.cookie=function(key,val,opt){
 	if(val!==''+val&&val!==+val)
 	return unescape((doc.cookie.match(key+'=(.+?);')||0)[1]||'');
 	opt=opt||{};
-	var it,date=new Date(),cookie=key+'='+encodeURIComponent(val);
+	var it,date=new Date,cookie=key+'='+encodeURIComponent(val);
 	date.setDate(date.getDate()+(''!==val?opt.expires||30:-1));
 	opt.expires=date.toUTCString();
 	for(it in opt)opt.hasOwnProperty(it)&&opt[it]&&(cookie+=';'+it+'='+opt[it]);
